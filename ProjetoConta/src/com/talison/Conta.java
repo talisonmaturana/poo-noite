@@ -5,15 +5,13 @@ public class Conta {
     public String agencia;
     public double saldo;
     public String nomeCliente;
-    public int retorno;
 
     public int sacar(double v){
-        if(saldo < v){
-            retorno = 0;
-        } else {
-            retorno = 1;
+        if(v <= saldo) {
+            saldo -= v;
+            return 1;
         }
-        return retorno;
+        return 0;
     }
 
     public void depositar( double v){

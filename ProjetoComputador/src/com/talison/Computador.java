@@ -11,18 +11,26 @@ public class Computador {
 
 
     public void imprimir() {
-        System.out.println("marca = " + marca);
-        System.out.println("cor = " + cor);
-        System.out.println("modelo = " + modelo);
-        System.out.println("numeroSerie = " + numeroSerie);
-        System.out.println("preco = " + preco);
+        System.out.println("Marca: " + marca);
+        System.out.println("Cor " + cor);
+        System.out.println("Modelo " + modelo);
+        System.out.println("Numero de serie: " + numeroSerie);
+        System.out.println("Preco: " + preco);
     }
 
     public void calcularValor() {
         if(marca == "HP"){
             preco += preco * 0.30;
-        } else if(marca == "IBM"){
+            /*
+            * Outra forma de fazer...
+            * preco *= 1.3
+            */
+        }
+        if(marca == "IBM"){
             preco += preco * 0.50;
+            /* Outra forma de fazer...
+             * preco *= 1.5
+             */
         }
     }
 
@@ -30,10 +38,9 @@ public class Computador {
         if(v > 0){
             preco = v;
             retorno = 1;
-            return retorno;
         } else {
             retorno = 0;
-            return retorno;
         }
+        return retorno;
     }
 }

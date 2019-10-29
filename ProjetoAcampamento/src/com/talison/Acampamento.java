@@ -6,18 +6,24 @@ public class Acampamento {
     public int idade;
 
     public void imprimir() {
-        System.out.println("nome = " + nome);
-        System.out.println("equipe = " + equipe);
-        System.out.println("idade = " + idade);
+        System.out.println("Nome: " + nome);
+        System.out.println("Equipe: " + equipe);
+        System.out.println("Idade: " + idade);
     }
 
     public void separarGrupo() {
-        if(idade >= 6 && idade <= 10) {
-            equipe = 'A';
-        } else if (idade >= 11 && idade <= 20) {
-            equipe = 'B';
-        } else if (idade >= 21) {
-            equipe = 'C';
+        if(idade<6){
+            equipe = '-';
+            return;
         }
+        if(idade<11){
+            equipe = 'A';
+            return;
+        }
+        if(idade<21){
+            equipe = 'B';
+            return;
+        }
+        equipe = 'C';
     }
 }
